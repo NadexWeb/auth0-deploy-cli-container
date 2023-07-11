@@ -1,8 +1,8 @@
-FROM docker.io/node:14-alpine
+FROM docker.io/node:20.4-alpine3.18
 
-ARG AUTH0_DEPLOY_CLI_VERSION=v7.3.1
+ARG AUTH0_DEPLOY_CLI_VERSION=v7.17.6
 
-RUN npm i -g auth0-deploy-cli@${AUTH0_DEPLOY_CLI_VERSION}
+RUN npm install -g auth0-deploy-cli@${AUTH0_DEPLOY_CLI_VERSION}
 
 ENTRYPOINT ["a0deploy"]
 
